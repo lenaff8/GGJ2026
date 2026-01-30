@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "InputSystem_Actions",
     "maps": [
         {
@@ -986,6 +987,94 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RGB",
+            "id": "0139e969-092e-4447-80bf-5e1cbe281d17",
+            "actions": [
+                {
+                    "name": "MousePosition",
+                    "type": "Value",
+                    "id": "6f62dc58-7178-4b83-a006-aacc1b075540",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "R",
+                    "type": "Button",
+                    "id": "188b273c-e573-4363-9e56-c5bb4b07c1d8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "G",
+                    "type": "Button",
+                    "id": "0e73a652-2c2d-4119-9d25-693a4d4e2e7d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "B",
+                    "type": "Button",
+                    "id": "0450c2cf-c857-4f98-a423-45dc1acb21af",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c394c39d-1b87-4bda-8b4c-3ad27a29cda1",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "587bf9f4-ada3-4e25-976f-89893fe84805",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "R",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9db3dd9-dbcf-4cd8-96b7-8a1d316f8031",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "G",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "25fb4f46-9d31-4958-9cbc-ffea9d1a0961",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "B",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
