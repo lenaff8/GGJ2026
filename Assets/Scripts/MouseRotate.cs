@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class LightBeamFollowMouse : MonoBehaviour
+public class LightBeamMouseRotate : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private InputSystem_Actions controls;
-    [SerializeField] private string buttonActionName;
+    [SerializeField] private string buttonActionName = "R";
+    [SerializeField] private float rotationSpeed = 60f;
 
-    private Vector2 mousePosition;
     private bool buttonPressed = false;
+    private float previousMouseX;
 
     private void Awake()
     {
@@ -20,14 +21,16 @@ public class LightBeamFollowMouse : MonoBehaviour
 
         controls.RGB.Enable();
 
-        controls.RGB.MousePosition.performed += ctx => mousePosition = ctx.ReadValue<Vector2>();
         InputAction button = controls.RGB.R;
         if(buttonActionName == "G")
             button = controls.RGB.G;
         if(buttonActionName == "B")
             button = controls.RGB.B;
-        
-        button.performed += ctx => buttonPressed = true;
+        button.performed += ctx =>
+        {
+            buttonPressed = true;
+            previousMouseX = Mouse.current.position.ReadValue().x;
+        };
         button.canceled  += ctx => buttonPressed = false;
     }
 
@@ -44,12 +47,11 @@ public class LightBeamFollowMouse : MonoBehaviour
     {
         if (!buttonPressed) return;
 
-        Vector3 mouseWorld = mainCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 0f));
-        mouseWorld.z = 0f;
+        float currentMouseX = Mouse.current.position.ReadValue().x;
+        float deltaX = currentMouseX - previousMouseX;
 
-        Vector3 direction = mouseWorld - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.Rotate(Vector3.forward, -deltaX * rotationSpeed * Time.deltaTime);
 
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        previousMouseX = currentMouseX;
     }
 }
