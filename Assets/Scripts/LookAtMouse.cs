@@ -42,7 +42,8 @@ public class LightBeamFollowMouse : MonoBehaviour
 
     private void Update()
     {
-        if (!buttonPressed) return;
+        if (!buttonPressed) 
+            return;
 
         Vector3 mouseWorld = mainCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 0f));
         mouseWorld.z = 0f;
