@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class LightBeamMouseRotate : MonoBehaviour
 {
-    [SerializeField] private Camera mainCamera;
     [SerializeField] private InputSystem_Actions controls;
     [SerializeField] private string buttonActionName = "R";
     [SerializeField] private float rotationSpeed = 60f;
@@ -13,9 +12,6 @@ public class LightBeamMouseRotate : MonoBehaviour
 
     private void Awake()
     {
-        if (mainCamera == null)
-            mainCamera = Camera.main;
-
         if (controls == null)
             controls = new InputSystem_Actions();
 

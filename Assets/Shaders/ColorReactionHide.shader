@@ -1,4 +1,4 @@
-Shader "Custom/ColorReaction"
+Shader "Custom/ColorReactionHide"
 {
     Properties
     {
@@ -61,16 +61,16 @@ Shader "Custom/ColorReaction"
 
                 float2 worldUV = (i.worldPos.xy - _CameraMin.xy) / _CameraSize.xy;
 
-                if (worldUV.x < 0 || worldUV.x > 1 || worldUV.y < 0 || worldUV.y > 1)
+                /*if (!(worldUV.x < 0 || worldUV.x > 1 || worldUV.y < 0 || worldUV.y > 1))
                     discard;
-
+*/
                 fixed4 lightCol = tex2D(_LightMap, worldUV);
 
                 bool matchR = (_RequiredColor.r > 0) ? (lightCol.r > _Threshold) : (lightCol.r <= _Threshold);
                 bool matchG = (_RequiredColor.g > 0) ? (lightCol.g > _Threshold) : (lightCol.g <= _Threshold);
                 bool matchB = (_RequiredColor.b > 0) ? (lightCol.b > _Threshold) : (lightCol.b <= _Threshold);
 
-                if (!(matchR && matchG && matchB))
+                if (matchR && matchG && matchB)
                     discard;
 
                  return baseCol;

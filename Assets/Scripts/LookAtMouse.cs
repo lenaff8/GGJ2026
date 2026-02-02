@@ -4,19 +4,17 @@ using UnityEngine.InputSystem;
 public class LightBeamFollowMouse : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
-    [SerializeField] private InputSystem_Actions controls;
     [SerializeField] private string buttonActionName;
-
+    [SerializeField] private float rotationSpeed = 360f; 
+    
+    private InputSystem_Actions controls;
     private Vector2 mousePosition;
     private bool buttonPressed = false;
-
+    private float targetAngle;
+    
     private void Awake()
     {
-        if (mainCamera == null)
-            mainCamera = Camera.main;
-
-        if (controls == null)
-            controls = new InputSystem_Actions();
+        controls = new InputSystem_Actions();
 
         controls.RGB.Enable();
 
@@ -33,11 +31,8 @@ public class LightBeamFollowMouse : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (controls != null)
-        {
-            controls.RGB.Disable();
-            controls.Dispose();
-        }
+        controls.RGB.Disable();
+        controls.Dispose();
     }
 
     private void Update()
@@ -48,9 +43,12 @@ public class LightBeamFollowMouse : MonoBehaviour
         Vector3 mouseWorld = mainCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 0f));
         mouseWorld.z = 0f;
 
-        Vector3 direction = mouseWorld - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Vector2 dir = mouseWorld - transform.position;
+        targetAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        float currentAngle = transform.eulerAngles.z;
+        float newAngle = Mathf.LerpAngle(currentAngle, targetAngle, rotationSpeed * Time.deltaTime / 360f);
+
+        transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
     }
 }
