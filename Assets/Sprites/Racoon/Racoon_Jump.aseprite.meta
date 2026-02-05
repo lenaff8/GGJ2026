@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 13f77806eebbc44488c93b04998686d8
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Racoon_Jump_Clip
+    second: {fileID: 7400000, guid: 7406ae533f487184fb8eb23a5c4b0c0f, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -84,7 +89,7 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
-    generateIndividualEvents: 1
+    generateIndividualEvents: 0
     generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
@@ -99,10 +104,10 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
-    generateIndividualEvents: 1
+    generateIndividualEvents: 0
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639058393067432316
+  platformSettingsDirtyTick: 639059288295244278
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -129,7 +134,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Frame_0
     originalName: 
-    pivot: {x: 0.61290324, y: -1.1162791}
+    pivot: {x: 0.61290324, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -150,7 +155,7 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 224}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.59574467, y: -1.1162791}
+    pivot: {x: 0.59574467, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -171,7 +176,7 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 173}
   - name: Frame_2
     originalName: 
-    pivot: {x: 0.57731956, y: -1.0666667}
+    pivot: {x: 0.57731956, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -192,7 +197,7 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 120}
   - name: Frame_3
     originalName: 
-    pivot: {x: 0.54901963, y: -0.97959185}
+    pivot: {x: 0.54901963, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -213,7 +218,7 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 63}
   - name: Frame_4
     originalName: 
-    pivot: {x: 0.52884614, y: -0.94117653}
+    pivot: {x: 0.52884614, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -234,7 +239,7 @@ ScriptedImporter:
     uvTransform: {x: 126, y: 4}
   - name: Frame_5
     originalName: 
-    pivot: {x: 0.51428574, y: -0.8888889}
+    pivot: {x: 0.51428574, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -255,7 +260,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 449}
   - name: Frame_6
     originalName: 
-    pivot: {x: 0.5192308, y: -0.8135593}
+    pivot: {x: 0.5192308, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -276,7 +281,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 382}
   - name: Frame_7
     originalName: 
-    pivot: {x: 0.5092593, y: -0.72727275}
+    pivot: {x: 0.5092593, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -297,7 +302,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 308}
   - name: Frame_8
     originalName: 
-    pivot: {x: 0.5350877, y: -0.7058824}
+    pivot: {x: 0.5350877, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -318,7 +323,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_9
     originalName: 
-    pivot: {x: 0.53097343, y: -0.7058824}
+    pivot: {x: 0.53097343, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -339,7 +344,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 80}
   - name: Frame_10
     originalName: 
-    pivot: {x: 0.52678573, y: -0.7058824}
+    pivot: {x: 0.52678573, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -360,7 +365,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 156}
   - name: Frame_11
     originalName: 
-    pivot: {x: 0.52678573, y: -0.7058824}
+    pivot: {x: 0.52678573, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -521,6 +526,30 @@ ScriptedImporter:
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Windows Store Apps
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 16384
