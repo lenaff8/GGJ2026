@@ -38,17 +38,8 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 2520355237
-    locked: 0
-  - name: TilesetBackground
-    uniqueID: 3915876759
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Foreground
-    uniqueID: 2964167377
     locked: 0
   m_RenderingLayers:
   - Default

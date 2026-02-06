@@ -29,8 +29,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Aperture: 0.284
-    - _CenterSize: 0
+    - _Aperture: 0.128
+    - _CenterSize: 0.0194
     - _EdgeSoftness: 0
     - _FadeEndAlpha: 0
     - _FadeStart: 0.4068

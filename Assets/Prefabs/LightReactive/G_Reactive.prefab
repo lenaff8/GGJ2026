@@ -66,7 +66,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 3
-  m_CompositeOrder: 2
+  m_CompositeOrder: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -80,11 +80,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 7.494597, y: -0.31302145}
-      - {x: 6.932029, y: 3.182645}
-      - {x: 4.702255, y: 6.0765066}
+      - {x: 7.39468, y: 1.3530698}
+      - {x: 6.847275, y: 3.0061846}
       - {x: -0.5756378, y: -0.12147927}
-      - {x: 4.7559643, y: -6.1442084}
-      - {x: 6.8518453, y: -3.269876}
+      - {x: 6.7958355, y: -3.3472714}
+      - {x: 7.398615, y: -1.3772116}
   m_UseDelaunayMesh: 1
 --- !u!114 &143773835991267406
 MonoBehaviour:
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd633ed296d39d4eb2d791811512050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  lightType: 0
+  targetLight: {fileID: 0}
   maxDistance: 20
   collider: {fileID: 1699607235181652623}
 --- !u!1 &1539925182773658850
@@ -167,7 +167,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 3
-  m_CompositeOrder: 2
+  m_CompositeOrder: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,11 +181,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 7.494597, y: -0.31302145}
-      - {x: 6.932029, y: 3.182645}
-      - {x: 4.702255, y: 6.0765066}
+      - {x: 7.39468, y: 1.3530698}
+      - {x: 6.847275, y: 3.0061846}
       - {x: -0.5756378, y: -0.12147927}
-      - {x: 4.7559643, y: -6.1442084}
-      - {x: 6.8518453, y: -3.269876}
+      - {x: 6.7958355, y: -3.3472714}
+      - {x: 7.398615, y: -1.3772116}
   m_UseDelaunayMesh: 1
 --- !u!114 &59786682167593074
 MonoBehaviour:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd633ed296d39d4eb2d791811512050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowLight
-  lightType: 2
+  targetLight: {fileID: 0}
   maxDistance: 20
   collider: {fileID: 3322853097371268220}
 --- !u!1 &4481213801267832043
@@ -302,7 +302,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 2
-  m_CompositeOrder: 2
+  m_CompositeOrder: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,11 +316,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 7.494597, y: -0.31302145}
-      - {x: 6.932029, y: 3.182645}
-      - {x: 4.702255, y: 6.0765066}
+      - {x: 7.39468, y: 1.3530698}
+      - {x: 6.847275, y: 3.0061846}
       - {x: -0.5756378, y: -0.12147927}
-      - {x: 4.7559643, y: -6.1442084}
-      - {x: 6.8518453, y: -3.269876}
+      - {x: 6.7958355, y: -3.3472714}
+      - {x: 7.398615, y: -1.3772116}
   m_UseDelaunayMesh: 1
 --- !u!114 &7328394721423259975
 MonoBehaviour:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd633ed296d39d4eb2d791811512050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowLight
-  lightType: 1
+  targetLight: {fileID: 0}
   maxDistance: 20
   collider: {fileID: 4281730234066597930}
 --- !u!1 &7019085190898390559
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_ShadowGroup: 0
   m_Priority: 0
   m_ComponentVersion: 5
-  m_HasRenderer: 1
+  m_HasRenderer: 0
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
@@ -621,12 +621,12 @@ MonoBehaviour:
     m_TrimEdge: 0.08
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0
+    m_InitialTrim: 0.08
   m_CastingOption: 1
-  m_PreviousTrimEdge: 0.08
-  m_PreviousEdgeProcessing: 1
-  m_PreviousShadowCastingSource: 2
-  m_PreviousShadowShape2DSource: {fileID: 2533278416830459352}
+  m_PreviousTrimEdge: 0
+  m_PreviousEdgeProcessing: -1
+  m_PreviousShadowCastingSource: -1
+  m_PreviousShadowShape2DSource: {fileID: 0}
   references:
     version: 2
     RefIds:

@@ -40,7 +40,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406843959429546683}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -80,11 +80,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 7.494597, y: -0.31302145}
-      - {x: 6.932029, y: 3.182645}
-      - {x: 4.702255, y: 6.0765066}
+      - {x: 7.39468, y: 1.3530698}
+      - {x: 6.847275, y: 3.0061846}
       - {x: -0.5756378, y: -0.12147927}
-      - {x: 4.7559643, y: -6.1442084}
-      - {x: 6.8518453, y: -3.269876}
+      - {x: 6.7958355, y: -3.3472714}
+      - {x: 7.398615, y: -1.3772116}
   m_UseDelaunayMesh: 1
 --- !u!114 &6310010813720333057
 MonoBehaviour:
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd633ed296d39d4eb2d791811512050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  lightType: 0
+  targetLight: {fileID: 0}
   maxDistance: 20
   collider: {fileID: 7583378307491123170}
 --- !u!1 &1281002916097944520
@@ -309,6 +309,48 @@ CompositeCollider2D:
         Y: -8519827
       - X: 22107992
         Y: -8519827
+  - m_Collider: {fileID: 7583378307491123170}
+    m_ColliderPaths:
+    - - X: 73986152
+        Y: -13772116
+      - X: 74945968
+        Y: -3130214
+      - X: 73946800
+        Y: 13530698
+      - X: 68472744
+        Y: 30061846
+      - X: -5756378
+        Y: -1214792
+      - X: 67958352
+        Y: -33472714
+  - m_Collider: {fileID: 1663211978038449248}
+    m_ColliderPaths:
+    - - X: 73986152
+        Y: -13772116
+      - X: 74945968
+        Y: -3130214
+      - X: 73946800
+        Y: 13530698
+      - X: 68472744
+        Y: 30061846
+      - X: -5756378
+        Y: -1214792
+      - X: 67958352
+        Y: -33472714
+  - m_Collider: {fileID: 3467589647210585378}
+    m_ColliderPaths:
+    - - X: 73986152
+        Y: -13772116
+      - X: 74945968
+        Y: -3130214
+      - X: 73946800
+        Y: 13530698
+      - X: 68472744
+        Y: 30061846
+      - X: -5756378
+        Y: -1214792
+      - X: 67958352
+        Y: -33472714
   - m_Collider: {fileID: 8683517762803030658}
     m_ColliderPaths:
     - - X: 22107992
@@ -320,7 +362,11 @@ CompositeCollider2D:
       - X: 22107992
         Y: -8519827
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 2.2107701, y: -0.8519827}
+      - {x: 2.2107701, y: 0.8519827}
+      - {x: -2.2107992, y: 0.8519534}
+      - {x: -2.2107701, y: -0.8519827}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -524,7 +570,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4397642724321058527}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -550,7 +596,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 3
-  m_CompositeOrder: 2
+  m_CompositeOrder: 3
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,11 +610,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 7.494597, y: -0.31302145}
-      - {x: 6.932029, y: 3.182645}
-      - {x: 4.702255, y: 6.0765066}
+      - {x: 7.39468, y: 1.3530698}
+      - {x: 6.847275, y: 3.0061846}
       - {x: -0.5756378, y: -0.12147927}
-      - {x: 4.7559643, y: -6.1442084}
-      - {x: 6.8518453, y: -3.269876}
+      - {x: 6.7958355, y: -3.3472714}
+      - {x: 7.398615, y: -1.3772116}
   m_UseDelaunayMesh: 1
 --- !u!114 &5729557894788647222
 MonoBehaviour:
@@ -582,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd633ed296d39d4eb2d791811512050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowLight
-  lightType: 1
+  targetLight: {fileID: 0}
   maxDistance: 20
   collider: {fileID: 1663211978038449248}
 --- !u!1 &5665233260254618885
@@ -625,7 +671,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5665233260254618885}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -651,7 +697,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 3
-  m_CompositeOrder: 2
+  m_CompositeOrder: 4
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,11 +711,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 7.494597, y: -0.31302145}
-      - {x: 6.932029, y: 3.182645}
-      - {x: 4.702255, y: 6.0765066}
+      - {x: 7.39468, y: 1.3530698}
+      - {x: 6.847275, y: 3.0061846}
       - {x: -0.5756378, y: -0.12147927}
-      - {x: 4.7559643, y: -6.1442084}
-      - {x: 6.8518453, y: -3.269876}
+      - {x: 6.7958355, y: -3.3472714}
+      - {x: 7.398615, y: -1.3772116}
   m_UseDelaunayMesh: 1
 --- !u!114 &9102200649336535758
 MonoBehaviour:
@@ -683,6 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd633ed296d39d4eb2d791811512050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowLight
-  lightType: 2
+  targetLight: {fileID: 0}
   maxDistance: 20
   collider: {fileID: 3467589647210585378}

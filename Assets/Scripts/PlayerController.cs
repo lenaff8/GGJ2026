@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Configuraciï¿½n de Movimiento")]
+    [Header("Configuración de Movimiento")]
     [SerializeField] private float moveSpeed = 8f;
     [SerializeField] private float jumpForce = 12f;
 
-    [Header("Detecciï¿½n de Suelo")]
+    [Header("Detección de Suelo")]
     [SerializeField] private float groundCheckDistance = 0.6f;
     [SerializeField] private LayerMask groundLayer;
 
@@ -17,12 +17,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private bool isTouchingGround;
     private bool facingRight = true;
-    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponentInChildren<Animator>();
 
         controls = new InputSystem_Actions();
 
@@ -50,9 +48,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        animator.SetBool("HorizontalBool", rb.linearVelocity.x != 0);
-        animator.SetFloat("Vertical", rb.linearVelocity.y);
-        animator.SetBool("VerticalBool", rb.linearVelocity.y != 0);
     }
 
     private void Move()
