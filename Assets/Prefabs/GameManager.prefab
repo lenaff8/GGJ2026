@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1696143018881884009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7974690263237114325}
+  - component: {fileID: 3934523585241264183}
+  - component: {fileID: 7132803996531695594}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7974690263237114325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696143018881884009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.87847, y: -1.89884, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3934523585241264183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696143018881884009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b274cadb99cd0d449e07e8b8cf5c16d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  scenes: 00000000010000000200000003000000040000000500000006000000
+--- !u!114 &7132803996531695594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696143018881884009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c04810a5dc80bb43b0e7d5fb26a96a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  sounds:
+  - name: Intro
+    clip: {fileID: 8300000, guid: 9f2bc1720f6b1e44e81acea7d95ec5e9, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 1, y: 1}
+    loop: 1
+    SFX: 0
+  - name: InGame
+    clip: {fileID: 8300000, guid: a763dd34e47fdc24782b5d606568f5ac, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 1, y: 1}
+    loop: 1
+    SFX: 0
+  - name: Running
+    clip: {fileID: 8300000, guid: 2c2e99364769c8246bff0f782c501580, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 1, y: 1}
+    loop: 1
+    SFX: 1
+  - name: Jump
+    clip: {fileID: 8300000, guid: a5e4b36c7f7674d4094e48694dcefcd5, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 0.8, y: 1.2}
+    loop: 0
+    SFX: 1
+  - name: Landing
+    clip: {fileID: 8300000, guid: cc8afe141c6862149835ea7d85b75cfc, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 0.8, y: 1.2}
+    loop: 0
+    SFX: 1
+  - name: Cracking
+    clip: {fileID: 8300000, guid: 813afee686bc0244bb75b15bf050b647, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 1, y: 1}
+    loop: 0
+    SFX: 1
+  - name: Collect
+    clip: {fileID: 8300000, guid: 17769afaea02e604ab2ce64c6caa3ca1, type: 3}
+    source: {fileID: 0}
+    volume: 0.857
+    pitchRange: {x: 1, y: 1}
+    loop: 0
+    SFX: 1
+  - name: LevelClear
+    clip: {fileID: 8300000, guid: 934e824dac9f32a4fb227d8908c33941, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    pitchRange: {x: 1, y: 1}
+    loop: 0
+    SFX: 1
+  - name: UIClick
+    clip: {fileID: 8300000, guid: cd43054ce06820e48bbf6a9bcfbf931b, type: 3}
+    source: {fileID: 0}
+    volume: 0.5
+    pitchRange: {x: 1, y: 1}
+    loop: 0
+    SFX: 1
